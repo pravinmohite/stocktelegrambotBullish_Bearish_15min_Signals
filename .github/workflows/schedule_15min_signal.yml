@@ -1,4 +1,4 @@
-name: Daily Telegram Signal Bullish/Bearish
+name: Daily Telegram Signal 15 min Bullish/Bearish
 
 on:
   schedule:
