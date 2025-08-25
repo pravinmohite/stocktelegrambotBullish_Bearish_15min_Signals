@@ -109,7 +109,7 @@ def analyze_stocks():
 
         if score >= 50:  # should be 90, atleast more than 50
             name = s.replace("^NSEI", "NIFTY").replace("^NSEBANK", "BANKNIFTY")
-            msg = (f"🚀 High Probability Bullish Move Detected (15min signals): {name}\n"
+            msg = (f"🚀 High Probability Bullish Move Detected (15 min signals): {name}\n"
                    f"📈 Change: {change_percent:.2f}%\n"
                    f"📊 RSI: {rsi:.1f}, SMA5: {sma5:.2f} > SMA20: {sma20:.2f}\n"
                    f"🔊 Vol: {today_vol:,} vs Avg: {avg_vol:,.0f}\n"
@@ -135,7 +135,7 @@ def analyze_stocks():
 
         if bear_score >= 50:  # should be 90, atleast more than 50
             name = s.replace("^NSEI", "NIFTY").replace("^NSEBANK", "BANKNIFTY")
-            msg = (f"🔻 Bearish Signal (15min signals): {name}\n"
+            msg = (f"🔻 Bearish Signal (15 min signals): {name}\n"
                    f"📉 Change: {change_percent:.2f}%\n"
                    f"📊 RSI: {rsi:.1f}, SMA5: {sma5:.2f} < SMA20: {sma20:.2f}\n"
                    f"🔊 Vol: {today_vol:,} vs Avg: {avg_vol:,.0f}\n"
@@ -147,7 +147,7 @@ def analyze_stocks():
             print(f"❌ {s} bearish score {bear_score}, skipping.")
 
     if not messages:
-        messages.append("⚠️ No high-confidence signals today.")
+        messages.append("⚠️ No high-confidence 15 min signals today.")
     return messages
 
 
