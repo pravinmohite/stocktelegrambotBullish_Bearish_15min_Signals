@@ -50,8 +50,8 @@ def analyze_stocks():
 
     for s in symbols:
         df = yf.download(s,
-                         period="25d",
-                         interval="1d",
+                         interval="15m"
+                         period="5d"
                          progress=False,
                          auto_adjust=True)
 
